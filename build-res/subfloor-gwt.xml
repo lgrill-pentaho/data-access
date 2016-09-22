@@ -258,6 +258,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             </fileset>
           </classpath>
         </available>
+        <available classname="au.com.bytecode.opencsv.CSVReader">
+          <classpath>
+            <fileset dir="${pentaho-ant-tasks.build.cache.dir}">
+              <include name="*.jar"/>
+            </fileset>
+          </classpath>
+        </available>
       </and>
     </condition>
     <antcall target="pentaho-ant-tasks.download"/>
