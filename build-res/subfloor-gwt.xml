@@ -249,4 +249,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <ivy:retrieve conf="default" pattern="${subfloor.resources.dir}/pentaho-ant-tasks/[module]-[revision](-[classifier]).[ext]"/>
   </target>
 
+    <!--=======================================================================
+      validate-gwt-compile
+
+      Fetches and installs Pentaho Ant tasks
+    ====================================================================-->
+    <target name="gwt-compile.validate" depends="install-pentaho-ant-tasks, gwt-compile">
+        <validate-gwt-compile stagePath="${gwt.output.dir}" whitelistFilePath="${basedir}/package-res/plugin.spring.xml" quickScan="true" debug="false" />
+    </target>
+
 </project>
